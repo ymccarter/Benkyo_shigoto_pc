@@ -42,3 +42,26 @@ for element in enumerate(mylist, start=1):
 
 New_num_list = list(enumerate(mylist, start=1))
 print(New_num_list)
+
+#Pretty Print
+#7.
+from pprint import pprint
+myprint_data = [
+    {
+        "first" : 1,
+        "second" : 2,
+        "third" : 3
+    },
+    {
+        "apple" : "red",
+        "banana" : "yellow",
+        "nested" : {'lvl': 2}
+    },
+    {'python', None}
+]
+print(myprint_data)
+pprint(myprint_data)
+
+#8. Show only each hirarlkey
+pprint(myprint_data, depth=1)
+pprint(myprint_data, depth=2)
