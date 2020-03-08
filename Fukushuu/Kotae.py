@@ -65,3 +65,71 @@ pprint(myprint_data)
 #8. Show only each hirarlkey
 pprint(myprint_data, depth=1)
 pprint(myprint_data, depth=2)
+
+
+#9. Python's Truth Testing procedure
+#is any of them True?
+#no
+print(bool(False))
+print(bool(0))
+print(bool(0.0))
+print(bool(0j))
+print(bool(''))
+print(bool(()))
+print(bool([]))
+print(bool({}))
+print(bool(None))
+
+# they are all true
+print(bool(2.5))
+print (bool('apple'))
+
+
+
+# 11. You have CSV file "example.csv" YOu want to read it and output what's in rows:
+#
+# CSV is :
+# first.row.is.header
+# 1.2.3.4_
+# 5.6.7
+# 9.9.9.9_
+# Expected output
+# ['1', '2', '3', '4_']
+# ['5', '6', '7']
+# ['9', '9', '9', '9_']
+# ['last', 'row', 'is', 'header']
+
+
+import csv
+
+with open('example.csv') as f:
+    rows = csv.reader(f, delimiter= '.')
+    header = next(rows); header[0] = 'last'
+    for row in rows:
+        print(row)
+    print(header)
+
+
+# 12 You want to write in CSV file
+#
+# What the file looks like is:
+# header-to-write
+#
+# 1-2-3
+# 1-2-3
+# 1-2-3
+#
+# An-extra-row
+
+wr_rows = [['header', 'to', 'write'],
+           [1,2,3],
+           [1,2,3],
+           [1,2,3],
+           ]
+
+with open('write_example.csv', 'w') as fw:
+    writer = csv.writer(fw, delimiter='-', lineterminator = '\n\n')
+    writer.writerows(wr_rows)
+    writer.writerow(['An', 'Extra', 'row'])
+
+

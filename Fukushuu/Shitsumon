@@ -21,3 +21,70 @@ Output would be:
 3, Third
 
 #6. Create the list including the number. Expected output is [(1, 'First'), (2, 'Second'), (3, 'Third')]
+
+7. The output of the following data is not good.
+
+myprint_data = [
+    {
+        "first" : 1,
+        "second" : 2,
+        "third" : 3
+    },
+    {
+        "apple" : "red",
+        "banana" : "yellow",
+        "nested" : {'lvl': 2}
+    },
+    {'python', None}
+]
+Looks like this
+[{'first': 1, 'second': 2, 'third': 3}, {'apple': 'red', 'banana': 'yellow', 'nested': {'lvl': 2}}, {None, 'python'}]
+
+Please make it looks like followings:
+
+[{'first': 1, 'second': 2, 'third': 3},
+ {'apple': 'red', 'banana': 'yellow', 'nested': {'lvl': 2}},
+ {None, 'python'}]
+
+
+ #9. Python's Truth Testing procedure
+#is any of them True?
+
+print(bool(False))
+print(bool(0))
+print(bool(0.0))
+print(bool(0j))
+print(bool(''))
+print(bool(()))
+print(bool([]))
+print(bool({}))
+print(bool(None))
+
+10. How about them?
+print(bool(2.5))
+print (bool('apple'))
+
+11. You have CSV file "example.csv" YOu want to read it and output what's in rows:
+
+CSV is :
+first.row.is.header
+1.2.3.4_
+5.6.7
+9.9.9.9_
+Expected output
+['1', '2', '3', '4_']
+['5', '6', '7']
+['9', '9', '9', '9_']
+['last', 'row', 'is', 'header']
+
+
+12 You want to write in CSV file
+
+What the file looks like is:
+header-to-write
+
+1-2-3
+1-2-3
+1-2-3
+
+An-extra-row
