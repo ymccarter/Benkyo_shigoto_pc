@@ -132,4 +132,32 @@ with open('write_example.csv', 'w') as fw:
     writer.writerows(wr_rows)
     writer.writerow(['An', 'Extra', 'row'])
 
+#13 List comprehension
+
+iterable = 1,2,3,4
+multiplied_list = list(map(lambda num: 5*num, iterable))
+print(multiplied_list)
+
+multiplied_list2 = [5*num for num in iterable ]
+print(multiplied_list2)
+
+multiplied_list3 = [5*num for num in range(1,5)]
+print(multiplied_list3)
+
+# 14 by uinsg set comprehension create a new set output like the below
+
+multiplied_set = {5*num for num in iterable}
+print("this is set {}".format(multiplied_set))
+multiplied_set2 = {5*num for num in range(1,5)}
+print("this is set with range :{}".format(multiplied_set2))
+
+
+#15 15 by using generator comprehension, create a new genarator output like the follwoing
+
+multiplied_generator = (5*num for num in iterable)
+print(multiplied_generator)
+print(next(multiplied_generator))
+print(next(multiplied_generator))
+print(next(multiplied_generator))
+print(next(multiplied_generator))
 

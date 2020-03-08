@@ -88,3 +88,18 @@ header-to-write
 1-2-3
 
 An-extra-row
+
+
+13 by using the list complihension, create a new list output like this :
+
+[5, 10, 15, 20]
+
+14 by uinsg set comprehension create a new set output like the below
+
+{10, 20, 5, 15}
+
+15 by using generator comprehension, create a new genarator output like the follwoing
+5
+10
+15
+20
